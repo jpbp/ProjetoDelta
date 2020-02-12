@@ -11,6 +11,14 @@ app.set('port',process.env.POST||3000)
 app.use(express.json())
 
 
+//importando rotas
+
+const alunoRouters = require('./router/AlunoRouter')
+
+// rota
+
+app.use('/aluno',alunoRouters)
+
 app.use('/test',(req,res)=>{
     res.send('Testando route')
 })
