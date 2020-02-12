@@ -14,7 +14,7 @@ controllers.datatest= async(req,res)=>{
         const img = fs.readFileSync('C:\desafioDelta.jpeg')
         console.log('foi')
         Aluno.create({
-            id:8,
+            id:9,
             nome:'João Paulo',
             endereco:'Rua joaquim manoel',
             imagem: img
@@ -29,10 +29,7 @@ controllers.datatest= async(req,res)=>{
         console.log(error)
         return error
     })
-    res.json(response)
-
-        
-     
+    res.json({sucess:true, data:response})
 }
 controllers.test = (req,res)=>{
     const data = {
