@@ -21,29 +21,30 @@ controllers.list=async(req,res)=>{
 }
 
 //teste do prograa
-// controllers.datatest= async(req,res)=>{
-//     const response = await sequelize.sync().then(function(){
-//         fs.openSync('C:\desafioDelta.jpeg')
-//         const img = fs.readFileSync('C:\desafioDelta.jpeg')
-//         console.log('foi')
-//         Aluno.create({
-//             id:9,
-//             nome:'João Paulo',
-//             endereco:'Rua joaquim manoel',
-//             imagem: img
-//         }).catch(error=>{
-//             return error
-//         })
+controllers.datatest= async(req,res)=>{
+    const response = await sequelize.sync().then(function(){
+        fs.openSync('C:\desafioDelta.jpeg')
+        const img = fs.readFileSync('C:\desafioDelta.jpeg')
+        console.log('foi')
+        Aluno.create({
+          
+            nome:'João Paulo',
+            endereco:'Rua joaquim manoel',
+            imagem: img
+        }).catch(error=>{
+            return error
+        })
+        
         
 
-//         const data= Aluno.findAll()
-//         return data
-//     }).catch(error=>{
-//         console.log(error)
-//         return error
-//     })
-//     res.json({sucess:true, data:response})
-// }
+        const data= Aluno.findAll()
+        return data
+    }).catch(error=>{
+        console.log(error)
+        return error
+    })
+    res.json({sucess:true, data:response})
+}
 // controllers.test = (req,res)=>{
 //     const data = {
 //         name:'João Paulo',
