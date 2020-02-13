@@ -20,11 +20,34 @@ controllers.list=async(req,res)=>{
     res.json({sucess:true,data:data})
 }
 
+controllers.create=async(req,res)=>{
+    // DATA 
+    const {nome,endereco,imagem}= req.body
+    //create
+    
+    const data = await Aluno.create({
+        nome:nome,
+        endereco:endereco,
+        imagem:imagem
+    }).then(function(data){
+        return data
+    }).catch(error=>{
+        console.log(error)
+        return error
+    })
+    res.status(200).json({
+        sucess:true,
+        mensagem:'Salvo com sucesso',
+        data:data
+    })
+}
+
+
 //teste do prograa
 controllers.datatest= async(req,res)=>{
     const response = await sequelize.sync().then(function(){
-        fs.openSync('C:\desafioDelta.jpeg')
-        const img = fs.readFileSync('C:\desafioDelta.jpeg')
+        fs.openSync('C:\\john.jpeg')
+        const img = fs.readFileSync('C:\\john.jpeg')
         console.log('foi')
         Aluno.create({
           
