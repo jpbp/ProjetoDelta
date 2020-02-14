@@ -35,7 +35,7 @@ class EditComponent extends React.Component{
       
        <div class="form-group">
          <label for="inputAddress">Foto</label>
-         <input type="file" name='foto' action="upload/post" class="form-control-file" id="img_preview" value={(this.state.campImagem)} onchange={(value)=>this.setState({campImagem:value.target.value})}></input>
+         <input type="file" name="filetoupload" ></input>
        </div>
         <br></br>
         <button type="submit" class="btn btn-primary" onClick={()=>this.sendSave()}>Save</button>

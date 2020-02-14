@@ -23,6 +23,7 @@ controllers.list=async(req,res)=>{
 controllers.create=async(req,res)=>{
     // DATA 
     const {nome,endereco,imagem}= req.body
+    
     //create
     
     const data = await Aluno.create({
@@ -50,7 +51,6 @@ controllers.datatest= async(req,res)=>{
         const img = fs.readFileSync('C:\\john.jpeg')
         console.log('foi')
         Aluno.create({
-          
             nome:'João Paulo',
             endereco:'Rua joaquim manoel',
             imagem: img
