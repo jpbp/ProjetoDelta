@@ -9,8 +9,11 @@ Depois basta ir na pasta do nodeFrontend e executar o comando (npm start) para r
 
 O programa dever rodar no http://localhost:3001/, onde o react está ativo, irá aparecer a lista dos alunos no banco de dados mysql
 
-Banco de dados:
 
+
+Tem o script do banco de dados para criar o schema, 
+
+conf Banco de dados:
 nome: node,
 usuario:root,
 senha:1234,
@@ -18,6 +21,6 @@ senha:1234,
 
 O crud não esá terminado pois me faltou conhecimento para lidar com imagens, mas tem a opção de inserir manualmente pelo programa, e aparece a lista dos alunos registrados. 
 
-Para inserir manualmente basta na na pagina do Alunocontroller.js, na função controllers.datatest, e adicionar manualmente, passando a foto, e está listando os alunos que foram adicionados.
+Para inserir manualmente basta ir pagina do Alunocontroller.js, na função controllers.datatest, e adicionar manualmente, passando a foto e depois entrando no http://localhost:3000/aluno/datatest, e depois está listando os alunos que foram adicionados.
 
 Eu fiz deu meu maximo sobre isso, mas infelizmente não consegui, mas obrigado pela Oportunidade.
